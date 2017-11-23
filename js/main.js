@@ -86,9 +86,13 @@ $(document).ready(function() {
             } else setCursorPosition(this.value.length, this)
         };
         var input = document.querySelector("#tel");
+        var input2 = document.querySelector("#tel2");
         input.addEventListener("input", mask, false);
         input.addEventListener("focus", mask, false);
         input.addEventListener("blur", mask, false);
+        input2.addEventListener("input", mask, false);
+        input2.addEventListener("focus", mask, false);
+        input2.addEventListener("blur", mask, false);
     });
 
 
