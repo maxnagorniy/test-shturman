@@ -12,21 +12,52 @@
 <!-- inject:svg -->
 <!-- endinject -->
     <header>
-      <div class="container">
-        <div class="site-logo"><a href="#"><img src="./images/logo.png"></a></div>
+      <div class="wrapper container">
         <nav class="header-menu">
+          <div class="site-logo"><a href="#"><img src="./images/logo.png"></a></div>
           <ul class="menu-list">
             <li><a href="#">Магазин скидок</a></li>
             <li><a href="#">Партнерам</a></li>
-            <li><a href="#">Book C</a></li>
-            <li><a href="#">Book D</a></li>
-            <li><a href="#">1</a></li>
+            <li>
+              <select class="header-select">
+                <option value="">Днепр</option>
+                <option value="1">Киев</option>
+                <option value="2">Запорожье</option>
+              </select>
+              <div class="custom_select">
+                <div class="current_option" data-value=""><span>Днепр</span><i class="fa fa-caret-down" id="select-icon" aria-hidden="true"></i></div>
+                <ul class="custom_options">
+                  <li data-value="">Днепр</li>
+                  <li data-value="1">Киев</li>
+                  <li data-value="2">Запорожье</li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#"><span class="light-text">Привет</span>Андрей<i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+            <li><a class="number-link" href="#"><span class="number-box">4</span><span class="number-text">Фрипея</span></a></li>
           </ul>
+          <button class="menu-open" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
         </nav>
-        <button class="menu-open" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
       </div>
     </header>
-    <div class="banner"></div>
+    <div class="banner">
+      <div class="container">
+        <h1>Введите номер телефона</h1>
+        <h4>Пополняйте выгодно прямо сейчас</h4>
+        <div class="form-banner">
+          <form class="form-banner__box" action="#">
+            <input class="form-banner__tel" value="" id="tel" placeholder="+38(___) ___-__-__"><i class="fa fa-phone" aria-hidden="true"></i>
+            <input class="form-banner__submit" type="submit" value="Пополнить">
+          </form>
+        </div>
+        <button class="white-btn" type="button">
+          <i class="fa fa-play-circle" aria-hidden="true"></i>Как работает сервис</button>
+        <div class="banner-sale-icon">
+          <button class="blue-btn banner-sale__btn" type="button">Пополнение</button><img class="banner-img-fp" src="/images/img-fp.png">
+          <!--button.green-btn.banner-sale__btn(type="button") Скидки--><span class="banner-sale-text">Скидки</span>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="js/vendors.js"></script>
     <script src="js/main.js"></script>
