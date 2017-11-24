@@ -3,6 +3,39 @@ $(document).ready(function() {
     // Если в проекте используются встроенные js-плагины от Foundation, разкомментировать
     //$(document).foundation();
 
+    $('.modal-open').click(function (event) {
+        event.preventDefault();
+
+
+        var modalName = $(this).attr("data-modal-name");
+
+        console.log("qwe1");
+
+        $('.overlay').fadeIn(400,
+            function () {
+                console.log("qwe");
+                $('#' + modalName)
+                    .css('display', 'block')
+
+                    .animate({opacity: 1, top: '50%'}, 200);
+                console.log("qwe");
+            });
+    });
+
+    $('.close-modal').click(function () {
+        $('.modal-window')
+            .animate({opacity: 0, top: '45%'}, 200,
+                function () {
+                    $(this).css('display', 'none');
+                    $('.overlay').fadeOut(400);
+                    //$('body').removeClass('blured-bacground');
+                }
+            );
+    });
+
+
+
+
 
     $('.menu-open').click(function () {
         $('.menu-list').slideToggle(300);
@@ -19,7 +52,6 @@ $(document).ready(function() {
         var windowsize = $window.width();
         if (windowsize > 991) {
             $('.menu-list').removeAttr("style");
-            console.log('test2')
         }
     }
     checkWidth();
@@ -94,6 +126,8 @@ $(document).ready(function() {
         input2.addEventListener("focus", mask, false);
         input2.addEventListener("blur", mask, false);
     });
+
+
 
 
 

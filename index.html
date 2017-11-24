@@ -69,11 +69,11 @@
           <div class="service-block__form">
             <form action="#">
               <div class="service-block__form-phone">
-                <input value="" id="tel2" placeholder="+38(___) ___-__-__"><i class="fa fa-phone" aria-hidden="true"></i>
+                <input class="input-default" value="" id="tel2" placeholder="+38(___) ___-__-__"><i class="fa fa-phone" aria-hidden="true"></i>
               </div>
               <div class="service-block__form-sum">
-                <input value="" placeholder="Сумма, грн">
-                <input type="submit" value="Пополнить">
+                <input class="input-default" value="" placeholder="Сумма, грн">
+                <input class="green-btn service-block__submit" type="submit" value="Пополнить">
               </div>
             </form>
           </div>
@@ -89,11 +89,11 @@
           <div class="service-block__form">
             <form action="#">
               <div class="service-block__form-phone">
-                <input value="" id="tel2" placeholder="+38(___) ___-__-__"><i class="fa fa-phone" aria-hidden="true"></i>
+                <input class="input-default" value="" id="card" placeholder="Номер карты получателя"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>
               </div>
               <div class="service-block__form-sum">
-                <input value="" placeholder="Сумма, грн">
-                <input type="submit" value="Пополнить">
+                <input class="input-default" value="" placeholder="Сумма, грн">
+                <input class="service-block__submit green-btn" type="submit" value="Перевести">
               </div>
             </form>
           </div>
@@ -105,20 +105,21 @@
           <h4 class="service-block__item-text">Популярные услуги</h4>
         </div>
         <div class="service-block__item-content">
-          <div class="service-block__img-list"><img src="./images/service-img1.png"><img src="./images/service-img2.png"><img src="./images/service-img3.png"><img src="./images/service-img4.png"><img src="./images/service-img5.png"><img src="./images/service-img6.png"></div>
-          <div class="service-block__form">
-            <form action="#">
-              <div class="service-block__form-phone">
-                <input value="" id="tel2" placeholder="+38(___) ___-__-__"><i class="fa fa-phone" aria-hidden="true"></i>
-              </div>
-              <div class="service-block__form-sum">
-                <input value="" placeholder="Сумма, грн">
-                <input type="submit" value="Пополнить">
-              </div>
-            </form>
-          </div>
+          <div class="service-block__img-list service-block__img-list_center"><img src="./images/service-img1.png"><img src="./images/service-img2.png"><img src="./images/service-img3.png"><img src="./images/service-img4.png"><img src="./images/service-img5.png"><img src="./images/service-img6.png"></div>
+          <div class="service-block__more"><a href="#">Еще</a></div>
         </div>
       </div>
+    </div>
+    <div class="modal">
+      <button class="more-info modal-open green-btn" data-modal-name="modal_window">Все услуги</button>
+    </div>
+    <!--a.modal-open(href="#" data-modal-name="question_modal") Задать вопрос-->
+    <div class="modal-window modal-callback" id="modal_window">
+      <p>Modal Opened</p>
+      <p>Modal Opened</p>
+      <p>Modal Opened</p>
+      <p>Modal Opened</p>
+      <p>Modal Opened</p>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="js/vendors.js"></script>
