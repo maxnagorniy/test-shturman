@@ -52,74 +52,91 @@
         </div>
         <button class="white-btn" type="button">
           <i class="fa fa-play-circle" aria-hidden="true"></i>Как работает сервис</button>
-        <div class="banner-sale-icon">
-          <button class="blue-btn banner-sale__btn" type="button">Пополнение</button><img class="banner-img-fp" src="/images/img-fp.png">
-          <!--button.green-btn.banner-sale__btn(type="button") Скидки--><span class="banner-sale-text">Скидки</span>
+        <div class="sale-icon">
+          <div class="sale-icon__btn-wrap">
+            <button class="blue-btn sale-icon__btn" type="button">Пополнение</button>
+          </div><img class="sale-icon__img-fp" src="/images/img-fp.png">
+          <!--button.green-btn.banner-sale__btn(type="button") Скидки-->
+          <div class="sale-icon__text-wrap"><span class="sale-icon__text">Скидки</span></div>
         </div>
       </div>
     </div>
-    <div class="service-block">
-      <div class="service-block__item">
-        <div class="service-block__item-head">
-          <div class="service-block__item-img"><img src="./images/phone-icon.png"></div>
-          <h4 class="service-block__item-text">Пополнить мобильный</h4>
+    <div class="service-wrapper">
+      <div class="service-block">
+        <div class="service-block__item">
+          <div class="service-block__item-head">
+            <div class="service-block__item-img"><img src="./images/phone-icon.png"></div>
+            <h4 class="service-block__item-text">Пополнить мобильный</h4>
+          </div>
+          <div class="service-block__item-content">
+            <div class="service-block__img-list"><img src="./images/brand-img1.png"><img src="./images/brand-logo2.png"><img src="./images/brand-img3.png"><img src="./images/brand-img4.png"><img src="./images/brand-img5.png"></div>
+            <div class="service-block__form">
+              <form action="#">
+                <div class="service-block__form-phone">
+                  <input class="input-default" value="" id="tel2" placeholder="+38(___) ___-__-__"><i class="fa fa-phone" aria-hidden="true"></i>
+                </div>
+                <div class="service-block__form-sum">
+                  <input class="input-default" value="" placeholder="Сумма, грн">
+                  <input class="green-btn service-block__submit" type="submit" value="Пополнить">
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="service-block__item-content">
-          <div class="service-block__img-list"><img src="./images/brand-img1.png"><img src="./images/brand-logo2.png"><img src="./images/brand-img3.png"><img src="./images/brand-img4.png"><img src="./images/brand-img5.png"></div>
-          <div class="service-block__form">
-            <form action="#">
-              <div class="service-block__form-phone">
-                <input class="input-default" value="" id="tel2" placeholder="+38(___) ___-__-__"><i class="fa fa-phone" aria-hidden="true"></i>
-              </div>
-              <div class="service-block__form-sum">
-                <input class="input-default" value="" placeholder="Сумма, грн">
-                <input class="green-btn service-block__submit" type="submit" value="Пополнить">
-              </div>
-            </form>
+        <div class="service-block__item">
+          <div class="service-block__item-head">
+            <div class="service-block__item-img"><img src="./images/cart-icon.png"></div>
+            <h4 class="service-block__item-text">Перевести с карты на карту</h4>
+          </div>
+          <div class="service-block__item-content">
+            <div class="service-block__img-list"><img src="./images/master-card.png"><img src="./images/visa.png"></div>
+            <div class="service-block__form">
+              <form action="#">
+                <div class="service-block__form-phone">
+                  <input class="input-default" value="" id="card" placeholder="Номер карты получателя"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                </div>
+                <div class="service-block__form-sum">
+                  <input class="input-default" value="" placeholder="Сумма, грн">
+                  <input class="service-block__submit green-btn" type="submit" value="Перевести">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="service-block__item">
+          <div class="service-block__item-head">
+            <div class="service-block__item-img"><img src="./images/star-icon.png"></div>
+            <h4 class="service-block__item-text">Популярные услуги</h4>
+          </div>
+          <div class="service-block__item-content">
+            <div class="service-block__img-list service-block__img-list_center"><img src="./images/service-img1.png"><img src="./images/service-img2.png"><img src="./images/service-img3.png"><img src="./images/service-img4.png"><img src="./images/service-img5.png"><img src="./images/service-img6.png"></div>
+            <div class="service-block__more"><a href="#">Еще</a></div>
           </div>
         </div>
       </div>
-      <div class="service-block__item">
-        <div class="service-block__item-head">
-          <div class="service-block__item-img"><img src="./images/cart-icon.png"></div>
-          <h4 class="service-block__item-text">Перевести с карты на карту</h4>
+      <div class="modal">
+        <button class="more-info modal-open green-btn" data-modal-name="modal_window">Все услуги</button>
+      </div>
+    </div>
+    <div class="modal-window modal-box" id="modal_window">
+      <div class="modal-content">
+        <div class="modal-content__close"><a class="close-modal" href="#"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+        <div class="modal-content__head">
+          <p class="modal-content__title">Есть аккаунт?<a class="modal-content__login" href="#">Войти</a></p>
         </div>
-        <div class="service-block__item-content">
-          <div class="service-block__img-list"><img src="./images/master-card.png"><img src="./images/visa.png"></div>
-          <div class="service-block__form">
-            <form action="#">
-              <div class="service-block__form-phone">
-                <input class="input-default" value="" id="card" placeholder="Номер карты получателя"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-              </div>
-              <div class="service-block__form-sum">
-                <input class="input-default" value="" placeholder="Сумма, грн">
-                <input class="service-block__submit green-btn" type="submit" value="Перевести">
-              </div>
-            </form>
+        <div class="modal-content__body">
+          <h3 class="modal-content__text">Регистрация</h3>
+          <div class="modal-content__btn-set">
+            <button class="grey-btn" type="button">По телефону</button>
+            <button class="grey-btn" type="button">По эл. почте</button>
+            <button class="blue-btn social-share" type="button">Через соц. сети</button>
           </div>
+          <h4 class="modal-content__choise-title">Выберите социальную сеть</h4>
+          <button class="modal-content__big-btn facebook" type="button"><i class="fa fa-facebook-official" aria-hidden="true"></i> Войти через Facebook</button>
+          <button class="modal-content__big-btn google" type="button"><i class="fa fa-google-plus-square" aria-hidden="true"></i> Войти через Google Plus</button>
+          <p class="modal-content__sub-text">Мы никогда ничего не опубликуем в Вашем аккаунте без Вашего разрешения</p>
         </div>
       </div>
-      <div class="service-block__item">
-        <div class="service-block__item-head">
-          <div class="service-block__item-img"><img src="./images/star-icon.png"></div>
-          <h4 class="service-block__item-text">Популярные услуги</h4>
-        </div>
-        <div class="service-block__item-content">
-          <div class="service-block__img-list service-block__img-list_center"><img src="./images/service-img1.png"><img src="./images/service-img2.png"><img src="./images/service-img3.png"><img src="./images/service-img4.png"><img src="./images/service-img5.png"><img src="./images/service-img6.png"></div>
-          <div class="service-block__more"><a href="#">Еще</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="modal">
-      <button class="more-info modal-open green-btn" data-modal-name="modal_window">Все услуги</button>
-    </div>
-    <!--a.modal-open(href="#" data-modal-name="question_modal") Задать вопрос-->
-    <div class="modal-window modal-callback" id="modal_window">
-      <p>Modal Opened</p>
-      <p>Modal Opened</p>
-      <p>Modal Opened</p>
-      <p>Modal Opened</p>
-      <p>Modal Opened</p>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="js/vendors.js"></script>
