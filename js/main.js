@@ -11,6 +11,8 @@ $(document).ready(function() {
 
         console.log("qwe1");
 
+
+        //строчка ниже не сработает, потому что .overlay нету на странице, я добавил в индекс 
         $('.overlay').fadeIn(400,
             function () {
                 console.log("qwe");
