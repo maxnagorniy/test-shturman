@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Если в проекте используются встроенные js-плагины от Foundation, разкомментировать
     //$(document).foundation();
@@ -6,13 +6,12 @@ $(document).ready(function() {
     $('.modal-open').click(function (event) {
         event.preventDefault();
 
-
         var modalName = $(this).attr("data-modal-name");
 
         console.log("qwe1");
 
 
-        //строчка ниже не сработает, потому что .overlay нету на странице, я добавил в индекс 
+        //строчка ниже не сработает, потому что .overlay нету на странице, я добавил в индекс
         $('.overlay').fadeIn(400,
             function () {
                 console.log("qwe");
@@ -36,15 +35,14 @@ $(document).ready(function() {
     });
 
 
-
-
-
     $('.menu-open').click(function () {
         $('.menu-list').slideToggle(300);
-        if ( $('.menu-open .fa').hasClass('fa-bars')){
+        // у тебя $('.menu-open .fa') одинаковое ниже, каждый раз оно будет искать этот класс по коду,
+        // лучше вначал выше объявить какую-то переменную и присвоить ей $('.menu-open .fa') и потом использовать
+        if ($('.menu-open .fa').hasClass('fa-bars')) {
             $('.menu-open .fa').removeClass('fa-bars');
             $('.menu-open .fa').addClass('fa-times');
-        } else if ($('.menu-open .fa').hasClass('fa-times')){
+        } else if ($('.menu-open .fa').hasClass('fa-times')) {
             $('.menu-open .fa').removeClass('fa-times');
             $('.menu-open .fa').addClass('fa-bars');
         }
@@ -56,29 +54,25 @@ $(document).ready(function() {
             $('.menu-list').removeAttr("style");
         }
     }
+
     checkWidth();
     $(window).resize(checkWidth);
 
 
-
-
-
-    $('.current_option').on('click', function() {
-
-        $('.current_option').toggleClass('select_active');
+    $('.current_option').on('click', function () {
+        $(this).toggleClass('select_active');
         $('#select-icon').toggleClass('fa-caret-down fa-caret-up');
         $('.custom_options').toggle();
-
     });
 
-    $('.custom_options').on('click', 'li', function() {
+    $('.custom_options').on('click', 'li', function () {
 
         $('.current_option').toggleClass('select_active');
         $('#select-icon').toggleClass('fa-caret-down fa-caret-up');
 
 
         var choosenValue = $(this).data('value');
-        var	choosenText = $(this).text();
+        var choosenText = $(this).text();
 
         $('select').val(choosenValue).prop('selected', true);
 
@@ -91,9 +85,7 @@ $(document).ready(function() {
     });
 
 
-
-
-    window.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("DOMContentLoaded", function () {
         function setCursorPosition(pos, elem) {
             elem.focus();
             if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
@@ -112,13 +104,14 @@ $(document).ready(function() {
                 def = matrix.replace(/\D/g, ""),
                 val = this.value.replace(/\D/g, "");
             if (def.length >= val.length) val = def;
-            this.value = matrix.replace(/./g, function(a) {
+            this.value = matrix.replace(/./g, function (a) {
                 return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
             });
             if (event.type == "blur") {
                 if (this.value.length == 2) this.value = ""
             } else setCursorPosition(this.value.length, this)
         };
+
         var input = document.querySelector("#tel");
         var input2 = document.querySelector("#tel2");
         input.addEventListener("input", mask, false);
@@ -128,10 +121,4 @@ $(document).ready(function() {
         input2.addEventListener("focus", mask, false);
         input2.addEventListener("blur", mask, false);
     });
-
-
-
-
-
-
 });
